@@ -1,0 +1,15 @@
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/dto/AnalyzeRequest.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/dto/FilterResponse.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/service/StringAnalysisService.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/dto/StringAnalysisResponse.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/exception/GlobalExceptionHandler.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/repository/StringAnalysisRepository.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/controller/TestController.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/AnalysisProperties.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/service/NaturalLanguageProcessor.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/repository/CharacterFrequencyRepository.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/StringAnalyzerApplication.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/CharacterFrequency.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/controller/StringAnalysisController.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/config/DataInitializer.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/StringAnalysis.java
