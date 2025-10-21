@@ -125,6 +125,10 @@ src/main/java/com/haidara/stringanalyzer/
 └── exception/
     └── GlobalExceptionHandler.java    # Error handling
 
+## 🚀 Live Deployment
+
+The API is deployed on Railway and available at:
+**https://haidara-string-analyzer-production.up.railway.app/**
 
 # Dependencies
 Spring Boot Starter Web - REST API framework
