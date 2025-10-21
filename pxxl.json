@@ -1,0 +1,26 @@
+{
+  "name": "string-analyzer",
+  "type": "docker",
+  "env": {
+    "JAVA_OPTS": "-Xmx256m -Xss512k -Dserver.port=8080"
+  },
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "ports": [
+    {
+      "port": 8080,
+      "protocol": "http"
+    }
+  ],
+  "checks": {
+    "liveness": {
+      "path": "/test",
+      "interval": "30s"
+    },
+    "readiness": {
+      "path": "/test",
+      "interval": "10s"
+    }
+  }
+}

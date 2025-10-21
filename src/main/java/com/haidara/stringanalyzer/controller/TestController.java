@@ -5,11 +5,11 @@ import org.springframework.boot.availability.ApplicationAvailability;
 import org.springframework.boot.availability.AvailabilityState;
 import org.springframework.boot.availability.LivenessState;
 import org.springframework.boot.availability.ReadinessState;
-import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,46 +20,40 @@ public class TestController {
     private ApplicationAvailability availability;
     
     @GetMapping("/test")
-    public String test() {
-        return "String Analyzer API is running!";
-    }
-    
-    @GetMapping("/test/db")
-    public String testDatabase() {
-        return "In-memory storage is active";
+    public Map<String, Object> test() {
+        Map<String, Object> response = new HashMap<>();
+        response.put("status", "success");
+        response.put("message", "String Analyzer API is running");
+        response.put("timestamp", LocalDateTime.now().toString());
+        response.put("liveness", availability.getLivenessState().toString());
+        response.put("readiness", availability.getReadinessState().toString());
+        return response;
     }
     
     @GetMapping("/health")
-    public ResponseEntity<Map<String, Object>> healthCheck() {
-        AvailabilityState livenessState = availability.getLivenessState();
-        AvailabilityState readinessState = availability.getReadinessState();
-        
-        Map<String, Object> health = new HashMap<>();
-        health.put("status", "UP");
-        health.put("timestamp", Instant.now().toString());
-        health.put("application", "String Analyzer API");
-        health.put("liveness", livenessState.toString());
-        health.put("readiness", readinessState.toString());
-        
-        return ResponseEntity.ok(health);
+    public Map<String, Object> health() {
+        Map<String, Object> response = new HashMap<>();
+        response.put("status", "UP");
+        response.put("timestamp", LocalDateTime.now().toString());
+        response.put("service", "String Analyzer API");
+        return response;
     }
     
     @GetMapping("/")
-    public ResponseEntity<Map<String, Object>> root() {
-        Map<String, Object> info = new HashMap<>();
-        info.put("message", "String Analyzer API");
-        info.put("version", "1.0.0");
-        info.put("timestamp", Instant.now().toString());
-        info.put("endpoints", Map.of(
+    public Map<String, Object> root() {
+        Map<String, Object> response = new HashMap<>();
+        response.put("service", "String Analyzer API");
+        response.put("version", "1.0.0");
+        response.put("timestamp", LocalDateTime.now().toString());
+        response.put("endpoints", Map.of(
             "POST /strings", "Analyze a string",
             "GET /strings/{value}", "Get string analysis",
             "GET /strings", "Get all strings with filtering",
             "GET /strings/filter-by-natural-language", "Natural language filtering",
             "DELETE /strings/{value}", "Delete string analysis",
             "GET /health", "Health check",
-            "GET /test", "Simple test"
+            "GET /test", "Service status"
         ));
-        
-        return ResponseEntity.ok(info);
+        return response;
     }
 }

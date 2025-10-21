@@ -2,7 +2,9 @@ com/haidara/stringanalyzer/repository/CharacterFrequencyRepository.class
 com/haidara/stringanalyzer/model/dto/AnalyzeRequest.class
 com/haidara/stringanalyzer/repository/StringAnalysisRepository.class
 com/haidara/stringanalyzer/exception/GlobalExceptionHandler.class
+com/haidara/stringanalyzer/config/WebConfig.class
 com/haidara/stringanalyzer/config/DataInitializer.class
+com/haidara/stringanalyzer/config/WebConfig$1.class
 com/haidara/stringanalyzer/controller/StringAnalysisController.class
 com/haidara/stringanalyzer/StringAnalyzerApplication.class
 com/haidara/stringanalyzer/service/NaturalLanguageProcessor.class

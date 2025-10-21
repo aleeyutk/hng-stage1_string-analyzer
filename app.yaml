@@ -1,0 +1,19 @@
+name: string-analyzer
+type: web
+plan: free
+
+build:
+  type: maven
+  command: mvn clean package -DskipTests
+
+run:
+  command: java -jar target/string-analyzer-1.0.0.jar
+  port: 8080
+
+healthcheck:
+  path: /health
+  initialDelay: 30
+
+env:
+  - name: JAVA_OPTS
+    value: -Xmx512m -Xms256m

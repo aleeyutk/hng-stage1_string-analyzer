@@ -11,5 +11,6 @@
 /home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/StringAnalyzerApplication.java
 /home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/CharacterFrequency.java
 /home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/controller/StringAnalysisController.java
+/home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/config/WebConfig.java
 /home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/config/DataInitializer.java
 /home/haidara/Desktop/HNG-internship/string-analyzer/src/main/java/com/haidara/stringanalyzer/model/StringAnalysis.java

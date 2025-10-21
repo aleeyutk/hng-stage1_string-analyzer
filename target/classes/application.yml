@@ -7,16 +7,15 @@ spring:
   jackson:
     serialization:
       write-dates-as-timestamps: false
-  mvc:
-    problemdetails:
-      enabled: true
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
 
 logging:
   level:
     com.haidara.stringanalyzer: INFO
+    org.springframework.web: INFO
   pattern:
     level: "%5p"
-
+    
 management:
   endpoints:
     web:
